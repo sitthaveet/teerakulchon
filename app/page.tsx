@@ -386,7 +386,7 @@ export default function Home() {
         {/* top small caption */}
         <div className="relative z-[3] mx-auto max-w-2xl text-center px-6">
           <div className="thai italic text-[#c9a24b]/70 text-xs tracking-[0.22em] rise">
-            ทะเบียนตระกูลแห่งหมึก ชาด และทอง
+            Family Tree of 余
           </div>
           <div className="hr-gold mt-6 rise" style={{ animationDelay: "0.1s" }} />
         </div>
@@ -406,9 +406,9 @@ export default function Home() {
           </div>
           <p className="mt-6 max-w-xl text-center thai text-[#f3e3b6]/80 text-[15px] leading-relaxed rise"
              style={{ animationDelay: "0.4s" }}>
-            ผังตระกูลของแซ่ <em>Yu</em> ถ่ายทอดจากกระดาษและเครื่องเขิน
-            เพื่อให้ลูกหลานรุ่นต่อไปได้ยืนอยู่เบื้องหน้า และระลึกถึง
-            มือของบรรพชนที่ส่งต่อชีวิตมาถึงเรา
+            ผังตระกูลของแซ่ <em>Yu</em> ถ่ายทอดด้วยใจขอบพระคุณพระเจ้า
+            ผู้ทรงประทานชีวิตและพระคุณแก่ครอบครัวของเรา
+            เพื่อให้ลูกหลานรุ่นต่อไปเติบโตในความเชื่อ ความรัก และความหวัง
           </p>
         </div>
 
