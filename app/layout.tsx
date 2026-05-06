@@ -18,6 +18,8 @@ const siteUrl =
 const title = "余氏家譜 · Yú Shì Jiā Pǔ";
 const description =
   "ผังตระกูลแซ่อวี๋ ถ่ายทอดด้วยจิตวิญญาณ คำสอนและความเชื่อ เพื่อให้ลูกหลานได้ระลึกถึงรากเหง้าและสายสกุลที่ส่งต่อกันมา";
+const thumbnailAlt =
+  "Gold Yu family seal on a deep red traditional Chinese background.";
 
 const notoSerifSC = Noto_Serif_SC({
   variable: "--font-serif-sc",
@@ -83,6 +85,15 @@ export const metadata: Metadata = {
     description,
     url: "/",
     siteName: "Yu Family Tree",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: thumbnailAlt,
+        type: "image/png",
+      },
+    ],
     locale: "th_TH",
     alternateLocale: ["zh_CN", "en_US"],
     type: "website",
@@ -91,6 +102,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
+    images: [
+      {
+        url: "/twitter-image.png",
+        width: 1200,
+        height: 630,
+        alt: thumbnailAlt,
+      },
+    ],
   },
   robots: {
     index: true,
