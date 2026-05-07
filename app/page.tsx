@@ -19,32 +19,66 @@ const PARTNER_PAIRS = [["สุวิทย์", "สุธีรา"]] as const
 
 const GENERATIONS: Record<
   number,
-  { cn: string; pinyin: string; thai: string; mood: string }
+  {
+    cn: string;
+    pinyin: string;
+    thai: string;
+    mood: string;
+    storyTitle: string;
+    storyTitleRoman: string;
+    story: string;
+  }
 > = {
   1: {
     cn: "第一代",
     pinyin: "Dì Yī Dài",
     thai: "คู่ปฐมวงศ์",
     mood: "รากเหง้าและภาชนะรับสายเลือด จุดเริ่มต้นของตระกูล",
+    storyTitle: "渡海立信",
+    storyTitleRoman: "Dù Hǎi Lì Xìn · ข้ามทะเลปลูกรากแห่งความเชื่อ",
+    story:
+      "ต้นธารของตระกูลเรากำเนิด ณ หมู่บ้านเล็กชื่อ 石头坑村 (สือโถวเคิง) แผ่นดินแม่ของชาวจีนแต้จิ๋ว ที่ซึ่งบรรพบุรุษหว่านเมล็ดของแซ่ 余 ลงในผืนดินมานานนับชั่วคน หลังเกิดสงครามความวุ่นวาย ด้วยหัวใจกล้าหาญและความหวังในชีวิตใหม่ อากงและอาม่าได้ละบ้านเกิดข้ามทะเลใต้ มุ่งหน้าสู่กรุงเทพมหานคร แบกเพียงเสื้อผ้าไม่กี่ชุด ภาษาแม่ติดปาก และพระคัมภีร์ในมือ ท่านทั้งสองได้ปักรากแห่งความเชื่อคริสเตียนลงในผืนดินใหม่นี้อย่างหนักแน่น เลี้ยงดูครอบครัวด้วยคำอธิษฐาน บทเพลงนมัสการ และความวางใจในพระเจ้าผู้ทรงพระชนม์ — มิใช่ในรูปเคารพหรือธรรมเนียมเดิม จากสองมือคู่นั้น พร้อมพระหัตถ์ของพระบิดาเบื้องบน ต้นไม้ใหญ่แห่งตระกูลธีรกุลชนจึงถือกำเนิดขึ้นเป็นพยานแห่งพระคุณสืบมาจนทุกวันนี้",
   },
   2: {
     cn: "第二代",
     pinyin: "Dì Èr Dài",
     thai: "ผู้สืบทอด",
     mood: "สี่กิ่งก้านจากลำต้นเดียว พร้อมจดจำครอบครัวที่เชื่อมโยงกัน",
+    storyTitle: "承信築家",
+    storyTitleRoman: "Chéng Xìn Zhù Jiā · สืบสานความเชื่อ ก่อร่างสร้างบ้าน",
+    story:
+      "รุ่นที่สองลืมตาดูโลก ณ กรุงเทพมหานคร เติบโตขึ้นในตรอกซอกซอยที่กลิ่นข้าวต้มกุ๊ยปะปนกับเสียงรถรางและเสียงเพลงนมัสการในเช้าวันอาทิตย์ พวกท่านพูดภาษาไทยคล่องเหมือนเจ้าของแผ่นดิน ในขณะที่ยังเข้าใจสำเนียงแต้จิ๋วของอาม่า เติบโตในบ้านคริสเตียนที่อากงอาม่าได้ปักรากความเชื่อไว้อย่างมั่นคง เรียนรู้คำอธิษฐานก่อนรับประทานอาหาร บทสดุดี และพระวจนะของพระเจ้าควบคู่ไปกับคุณค่าที่ส่งต่อมาจากบรรพบุรุษ — ความขยัน ความประหยัด ความซื่อสัตย์ และความกตัญญู — หลอมรวมสองวัฒนธรรมไทย-จีนและความเชื่อในพระคริสต์เข้าเป็นเนื้อเดียวกัน วางเสาหลักให้บ้านหลังนี้มั่นคงพอจะรองรับลูกหลานในวันข้างหน้า",
   },
   3: {
     cn: "第三代",
     pinyin: "Dì Sān Dài",
     thai: "ผู้สานต่อ",
     mood: "ผู้แบกมุมมองยาวไกล — 远 · ยืนยาว",
+    storyTitle: "都市新章",
+    storyTitleRoman: "Dū Shì Xīn Zhāng · บทใหม่ของชาวเมือง",
+    story:
+      "รุ่นที่สามคือคนไทยอย่างเต็มภาคภูมิ เติบโตขึ้นในยุคที่กรุงเทพฯ เปลี่ยนโฉมไปทุกวัน ตึกสูงผุดขึ้นแทนที่ตึกแถวไม้ รถไฟฟ้าวิ่งข้ามแม่น้ำเจ้าพระยา และโลกทั้งใบถูกย่อมาไว้ในจอเล็กๆ พวกเราได้รับการศึกษาที่ดี เดินทางออกไปเห็นโลกกว้าง และก้าวเข้าสู่อาชีพการงานที่หลากหลาย ทว่าไม่ว่าจะไปไกลแค่ไหน ก็ยังจดจำรสชาติอาหารบนโต๊ะกลมของอาม่า เสียงอธิษฐานขอบพระคุณก่อนรับประทานอาหาร และคำสอนเรื่องการพึ่งพาพระเจ้าและการรักครอบครัวที่ต้องอยู่เคียงข้างกัน เราคือสะพานที่รับมรดกแห่งความเชื่อจากอากงอาม่า แล้วส่งต่อพระคุณนั้นให้กิ่งก้านรุ่นถัดไปได้เติบโตในร่มเงาของพระเจ้าองค์เดียวกัน",
   },
   4: {
     cn: "第四代",
     pinyin: "Dì Sì Dài",
     thai: "กิ่งใหม่ที่เติบโต",
     mood: "หน่อใหม่ล่าสุดของต้นไม้เก่าแก่",
+    storyTitle: "新芽向陽",
+    storyTitleRoman: "Xīn Yá Xiàng Yáng · หน่ออ่อนที่หันสู่แสงตะวัน",
+    story:
+      "รุ่นที่สี่คือกิ่งก้านใหม่ล่าสุด หน่ออ่อนแห่ง Generation Alpha ที่ลืมตาดูโลกในยุคดิจิทัล ผูกพันกับเทคโนโลยี ปัญญาประดิษฐ์ และความเปลี่ยนแปลงอันรวดเร็วราวกับเป็นเรื่องธรรมดาของชีวิต อนาคตอันสดใสและกว้างใหญ่กำลังรอคอยอยู่เบื้องหน้า ขอให้พระคุณของพระเจ้าผู้ทรงสัตย์ซื่อโอบอุ้ม ความรักของพ่อแม่ปู่ย่าตายายเป็นปุ๋ยรดราก และมรดกแห่งความเชื่อ ความหวัง ความรัก ที่อากงอาม่าได้หว่านไว้บนแผ่นดินใหม่กว่าร้อยปี เป็นแสงนำทางให้พวกเขาเติบโตขึ้นเป็นต้นไม้ใหญ่ที่ถวายเกียรติแด่พระเจ้า และแผ่ร่มเงาแห่งพระพรให้แก่โลกใบนี้สืบไปทุกชั่วรุ่น",
   },
+};
+
+const GENERATION_BACKGROUNDS: Record<
+  number,
+  { src: string; position: string }
+> = {
+  1: { src: "/shitoukeng.jpg", position: "center" },
+  2: { src: "/bkk-1990s.jpg", position: "center" },
+  3: { src: "/bkk-2000s.jpg", position: "center" },
+  4: { src: "/bkk-2020s.jpg", position: "center" },
 };
 
 function groupByHierarchy(list: Member[]) {
@@ -236,9 +270,27 @@ function GenerationBand({
   index: number;
 }) {
   const meta = GENERATIONS[level];
+  const background = GENERATION_BACKGROUNDS[level];
   const generationItems = groupPartners(people);
   return (
-    <section className="relative py-20 md:py-28">
+    <section className="relative isolate overflow-hidden py-20 md:py-28">
+      {background && (
+        <div className="absolute inset-0 -z-10" aria-hidden>
+          <Image
+            src={background.src}
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover"
+            style={{ objectPosition: background.position }}
+          />
+          <div className="absolute inset-0 bg-[#120606]/72 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(38,9,9,0.2)_0%,rgba(10,6,5,0.52)_58%,rgba(8,3,3,0.88)_100%)]" />
+          <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0a0605] to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0a0605] to-transparent" />
+        </div>
+      )}
+
       {/* hanging beam */}
       <div className="relative mx-auto max-w-6xl">
         {/* the beam/crossbar the scrolls hang from */}
@@ -272,6 +324,40 @@ function GenerationBand({
         {/* quietly italic descriptor */}
         <div className="mt-4 text-center thai italic text-[#c9a24b]/65 text-sm tracking-wide">
           — {meta.mood} —
+        </div>
+
+        {/* generation story — narrative on parchment */}
+        <div
+          className="relative z-[2] mx-auto mt-12 max-w-2xl px-6 inkbloom"
+          style={{ animationDelay: `${index * 0.1 + 0.2}s` }}
+        >
+          <div className="scroll-card relative px-7 py-9 md:px-10 md:py-10">
+            <span className="absolute top-2 left-2 z-[3] w-4 h-4 border-t-2 border-l-2 border-[#c9a24b]/70" />
+            <span className="absolute top-2 right-2 z-[3] w-4 h-4 border-t-2 border-r-2 border-[#c9a24b]/70" />
+            <span className="absolute bottom-2 left-2 z-[3] w-4 h-4 border-b-2 border-l-2 border-[#c9a24b]/70" />
+            <span className="absolute bottom-2 right-2 z-[3] w-4 h-4 border-b-2 border-r-2 border-[#c9a24b]/70" />
+
+            <header className="relative z-[2] flex flex-col items-center">
+              <div className="brush text-[#4d0606] text-3xl md:text-4xl tracking-[0.18em]">
+                {meta.storyTitle}
+              </div>
+              <div className="mt-2 serif-en italic text-[#7a3a0a] text-[10px] tracking-[0.28em] uppercase text-center">
+                {meta.storyTitleRoman}
+              </div>
+              <div className="mt-4 flex items-center gap-3 w-full">
+                <span className="diamond" />
+                <span className="flex-1 h-px bg-gradient-to-r from-transparent via-[#c9a24b]/60 to-transparent" />
+                <span className="diamond" />
+              </div>
+            </header>
+
+            <p className="relative z-[2] mt-6 thai text-[#1a0605] text-[13.5px] md:text-[14.5px] leading-[2] text-justify hyphens-auto indent-6">
+              <span className="brush text-[#a11b1b] text-2xl mr-1 align-[-0.18em] font-bold">
+                記
+              </span>
+              {meta.story}
+            </p>
+          </div>
         </div>
 
         {/* scrolls row */}
