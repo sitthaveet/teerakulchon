@@ -1,3 +1,4 @@
+import Image from "next/image";
 import familyMembersData from "./family_members.json";
 
 type Member = {
@@ -431,6 +432,73 @@ export default function Home() {
           <div className="mt-3 thai italic text-[#c9a24b]/75 text-[12px] tracking-[0.18em]">
             ความเชื่อ ความหวัง และความรัก
           </div>
+        </div>
+      </section>
+
+      {/* === FAMILY PORTRAIT === */}
+      <section className="relative px-6 pt-10 pb-20 md:pt-16 md:pb-28">
+        <div className="mx-auto max-w-4xl">
+
+          {/* hanging scroll-mounted portrait */}
+          <figure
+            className="relative mx-auto max-w-3xl unfurl flex flex-col items-center"
+            style={{ animationDelay: "0.4s" }}
+          >
+            {/* hanging cord from above */}
+            <div className="cord" />
+
+            <div className="w-full flex flex-col">
+              {/* top wooden roller */}
+              <div className="roller h-[16px] -mx-3 md:-mx-4" />
+
+              {/* parchment-mounted photo */}
+              <div className="relative scroll-card p-3 md:p-4">
+                {/* gold corner brackets */}
+                <span className="absolute top-2 left-2 z-[3] w-4 h-4 border-t-2 border-l-2 border-[#c9a24b]/80" />
+                <span className="absolute top-2 right-2 z-[3] w-4 h-4 border-t-2 border-r-2 border-[#c9a24b]/80" />
+                <span className="absolute bottom-2 left-2 z-[3] w-4 h-4 border-b-2 border-l-2 border-[#c9a24b]/80" />
+                <span className="absolute bottom-2 right-2 z-[3] w-4 h-4 border-b-2 border-r-2 border-[#c9a24b]/80" />
+
+                {/* the photo */}
+                <div className="relative overflow-hidden rounded-[2px]">
+                  <Image
+                    src="/family_photo.jpg"
+                    alt="ภาพหมู่ครอบครัวธีรกุลชน — Teerakulchon family portrait"
+                    width={1280}
+                    height={721}
+                    sizes="(min-width: 768px) 768px, 100vw"
+                    className="w-full h-auto block"
+                    priority
+                  />
+                  {/* warm tonal wash to harmonize with page palette */}
+                  <div className="pointer-events-none absolute inset-0 mix-blend-multiply bg-gradient-to-b from-[#f6e6b4]/0 via-transparent to-[#3d0e0e]/20" />
+                  {/* subtle vignette */}
+                  <div className="pointer-events-none absolute inset-0 [box-shadow:inset_0_0_70px_rgba(40,10,10,0.45)]" />
+                </div>
+
+                {/* tilted red seal at the corner of the mount */}
+                <div className="seal absolute -bottom-4 -right-4 z-[3] flex h-14 w-14 items-center justify-center rounded-[3px] text-[20px] rotate-[-6deg] shadow-[0_8px_24px_rgba(0,0,0,0.45)]">
+                  家
+                </div>
+              </div>
+
+              {/* bottom wooden roller */}
+              <div className="roller h-[20px] -mx-4 md:-mx-5" />
+            </div>
+
+            {/* base tassel */}
+            <div className="mt-3 flex gap-1.5 opacity-90">
+              <span className="block w-[2px] h-7 bg-gradient-to-b from-[#9e1a16] to-[#3d0e0e] rounded-full" />
+              <span className="block w-[2px] h-9 bg-gradient-to-b from-[#c7361e] to-[#4d0606] rounded-full" />
+              <span className="block w-[2px] h-7 bg-gradient-to-b from-[#9e1a16] to-[#3d0e0e] rounded-full" />
+            </div>
+
+            {/* caption beneath */}
+            <figcaption className="mt-10 max-w-2xl text-center thai italic text-[#f3e3b6]/75 text-sm leading-relaxed tracking-wide">
+              สี่รุ่นใต้ร่มพระคุณ — ภาพหนึ่งใบที่บันทึกความรัก ความผูกพัน
+              และพระพรของครอบครัวธีรกุลชน
+            </figcaption>
+          </figure>
         </div>
       </section>
 
