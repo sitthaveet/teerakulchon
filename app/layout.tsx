@@ -9,13 +9,9 @@ import {
 } from "next/font/google";
 import "./globals.css";
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  (process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : "http://localhost:3000");
+const siteUrl = `https://teerakulchon.vercel.app/`;
 
-const title = "余氏家譜 · Yú Shì Jiā Pǔ";
+const title = "ธีรกุลชน Family";
 const description =
   "ผังตระกูลแซ่อวี๋ ถ่ายทอดด้วยจิตวิญญาณ คำสอนและความเชื่อ เพื่อให้ลูกหลานได้ระลึกถึงรากเหง้าและสายสกุลที่ส่งต่อกันมา";
 const thumbnailAlt =

@@ -18,31 +18,27 @@ const PARTNER_PAIRS = [["สุวิทย์", "สุธีรา"]] as const
 
 const GENERATIONS: Record<
   number,
-  { numeral: string; cn: string; pinyin: string; thai: string; mood: string }
+  { cn: string; pinyin: string; thai: string; mood: string }
 > = {
   1: {
-    numeral: "壹",
     cn: "第一代",
     pinyin: "Dì Yī Dài",
     thai: "คู่ปฐมวงศ์",
     mood: "รากเหง้าและภาชนะรับสายเลือด จุดเริ่มต้นของตระกูล",
   },
   2: {
-    numeral: "貳",
     cn: "第二代",
     pinyin: "Dì Èr Dài",
     thai: "ผู้สืบทอด",
-    mood: "สามกิ่งก้านจากลำต้นเดียว พร้อมจดจำครอบครัวที่เชื่อมโยงกัน",
+    mood: "สี่กิ่งก้านจากลำต้นเดียว พร้อมจดจำครอบครัวที่เชื่อมโยงกัน",
   },
   3: {
-    numeral: "參",
     cn: "第三代",
     pinyin: "Dì Sān Dài",
     thai: "ผู้สานต่อ",
     mood: "ผู้แบกมุมมองยาวไกล — 远 · ยืนยาว",
   },
   4: {
-    numeral: "肆",
     cn: "第四代",
     pinyin: "Dì Sì Dài",
     thai: "กิ่งใหม่ที่เติบโต",
@@ -170,11 +166,6 @@ function MemberScroll({
             <span className="brush text-[#a11b1b] text-base mr-1 font-bold">釋</span>
             {member.meaning}
           </p>
-
-          {/* corner seal */}
-          <div className="absolute bottom-5 right-5 z-[3] seal w-10 h-10 flex items-center justify-center text-[13px] rounded-[2px]">
-            {GENERATIONS[member.hierarchy].numeral}
-          </div>
         </div>
 
         {/* bottom wooden roller */}
@@ -386,7 +377,7 @@ export default function Home() {
         {/* top small caption */}
         <div className="relative z-[3] mx-auto max-w-2xl text-center px-6">
           <div className="thai italic text-[#c9a24b]/70 text-xs tracking-[0.22em] rise">
-            Family Tree of 余
+            ต้นตระกูล 余 ธีรกุลชน
           </div>
           <div className="hr-gold mt-6 rise" style={{ animationDelay: "0.1s" }} />
         </div>
@@ -395,19 +386,20 @@ export default function Home() {
         <div className="relative z-[3] mt-10 md:mt-16 flex flex-col items-center px-6">
           <h1 className="brush gold-foil text-7xl md:text-[8rem] lg:text-[10rem] leading-[0.95] tracking-[0.1em] rise"
               style={{ animationDelay: "0.15s" }}>
-            余氏家譜
+            余
           </h1>
           <div className="mt-4 flex items-center gap-5 rise" style={{ animationDelay: "0.3s" }}>
             <span className="flex-1 h-px w-16 bg-[#c9a24b]/60" />
             <span className="serif-en italic text-[#eac975] text-base tracking-[0.35em] uppercase">
-              Yú Shì Jiā Pǔ
+              Teerakulchon
             </span>
             <span className="flex-1 h-px w-16 bg-[#c9a24b]/60" />
           </div>
           <p className="mt-6 max-w-xl text-center thai text-[#f3e3b6]/80 text-[15px] leading-relaxed rise"
              style={{ animationDelay: "0.4s" }}>
-            ผังตระกูลของแซ่ <em>Yu</em> ถ่ายทอดด้วยใจขอบพระคุณพระเจ้า
-            ผู้ทรงประทานชีวิตและพระคุณแก่ครอบครัวของเรา
+            ผังตระกูลของแซ่ <em>余 (yú)</em> ธีรกุลชน 
+            <br></br>ถ่ายทอดด้วยใจขอบพระคุณพระเจ้า
+            ผู้มอบชีวิตและพระคุณแก่ครอบครัวของเรา
             เพื่อให้ลูกหลานรุ่นต่อไปเติบโตในความเชื่อ ความรัก และความหวัง
           </p>
         </div>
@@ -423,9 +415,6 @@ export default function Home() {
             <span className="relative z-[2] serif-cn gold-foil text-[9rem] md:text-[12rem] leading-none font-black">
               余
             </span>
-            <span className="relative z-[2] serif-en italic text-[#f6e6b4]/85 text-[11px] tracking-[0.45em] uppercase mt-[-8px]">
-              Yú · แซ่
-            </span>
           </div>
         </div>
 
@@ -435,21 +424,13 @@ export default function Home() {
           <div className="flex items-center gap-4">
             <span className="diamond" />
             <span className="calligraphy gold-foil text-2xl md:text-3xl tracking-[0.3em]">
-              源遠流長
+              信望愛
             </span>
             <span className="diamond" />
           </div>
           <div className="mt-3 thai italic text-[#c9a24b]/75 text-[12px] tracking-[0.18em]">
-            Yuán Yuǎn Liú Cháng — ต้นธารไกล สายน้ำยืนยาว
+            ความเชื่อ ความหวัง และความรัก
           </div>
-        </div>
-
-        {/* Census strip */}
-        <div className="relative z-[3] mt-16 mx-auto max-w-3xl grid grid-cols-3 gap-4 px-8 inkbloom"
-             style={{ animationDelay: "1s" }}>
-          <StatCell top="四" topRoman="Sì" bottom="รุ่นสืบสกุล" />
-          <StatCell top={toChineseNumeral(totalMembers)} topRoman="Míng" bottom="รายนามที่บันทึก" />
-          <StatCell top="余" topRoman="Yú" bottom="สายแซ่" />
         </div>
       </section>
 
