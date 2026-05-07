@@ -13,9 +13,9 @@ const siteUrl = `https://teerakulchon.vercel.app/`;
 
 const title = "ธีรกุลชน Family";
 const description =
-  "ผังตระกูลแซ่อวี๋ ถ่ายทอดด้วยจิตวิญญาณ คำสอนและความเชื่อ เพื่อให้ลูกหลานได้ระลึกถึงรากเหง้าและสายสกุลที่ส่งต่อกันมา";
+  "ตระกูลธีรกุลชน 余 (yú) ถ่ายทอดด้วยจิตวิญญาณ คำสอนและความเชื่อ เพื่อให้ลูกหลานได้ระลึกถึงรากเหง้าและสายสกุลที่ส่งต่อกันมา";
 const thumbnailAlt =
-  "Gold Yu family seal on a deep red traditional Chinese background.";
+  "ตระกูลธีรกุลชน 余 (yú) ถ่ายทอดด้วยจิตวิญญาณ คำสอนและความเชื่อ เพื่อให้ลูกหลานได้ระลึกถึงรากเหง้าและสายสกุลที่ส่งต่อกันมา";
 
 const notoSerifSC = Noto_Serif_SC({
   variable: "--font-serif-sc",
